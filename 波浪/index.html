@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: relative;
+            border: 2px solid #00a2e8;
+            margin: 30px auto;
+            overflow: hidden;
+
+        }
+        .wave{
+            position: absolute;
+            left: 0;
+            top: 50px;
+            opacity: 0.6;
+            animation: wav 3s linear infinite;
+        }
+        .wave2{
+            left: -100px;
+            animation: wavl 3s linear infinite;
+        }
+        @keyframes wav
+        {
+            from {left: 0px;}
+            to {left: -200px;}
+        }
+        @keyframes wavl
+        {
+            from {left: -100px;}
+            to {left: -300px;}
+        }
+    </style>
+</head>
+<body>
+        aa
+    <div class="box" style="float: left">
+        <img src="images/wave1.png" alt="" class="wave1 wave">
+        <img src="images/wave2.png" alt="" class="wave2 wave">
+    </div>
+aaa
+</body>
+</html>
