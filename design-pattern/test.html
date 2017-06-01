@@ -1,0 +1,584 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="renderer" content="webkit">
+<title>大咖名人堂-保险_成人保险_儿童保险_中老年保险_健康保险_意外保险_旅游保险_理财保险</title>
+<meta http-equiv="keywords" content="大咖名人堂-保险_成人保险_儿童保险_中老年保险_健康保险_意外保险_旅游保险_理财保险"/>
+<meta http-equiv="description" content="大咖名人堂-保险_成人保险_儿童保险_中老年保险_健康保险_意外保险_旅游保险_理财保险"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+<head>
+    <!--[if lt IE 9]>
+    <script src="//r/cms/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--所有页面必须调用到的样式-->
+    <link href="/r/cms/www/default3/css/live.css" rel="stylesheet" type="text/css"/>
+    <link href="/r/cms/www/default3/css/baoxian.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/thirdparty/jquery.min.js"></script>
+    <script src="/res/jeecms/js/moment.min.js"></script>
+    <script src="/res/jeecms/js/MemberClient.js?20160605_01"></script>
+    <script src="/res/jeecms/js/dateFormat.js"></script>
+    <script src="/res/jeecms/js/jsonFormat.js"></script>
+    <script type="text/javascript" src="/r/cms/www/default3/js/common.js?20161018_01"></script>
+    <link rel="stylesheet" type="text/css"
+          href="http://g.alicdn.com/de/prismplayer/1.3.8/skins/default/index-min.css"/>
+    <script src="http://g.alicdn.com/de/prismplayer/1.3.8/prism-min.js" type="text/javascript"></script>
+    <script src="/res/jeecms/js/isMobile.min.js" type="text/javascript"></script>
+    <script src="/res/jeecms/js/live.js?20160605_01" type="text/javascript"></script>
+    <script type="text/javascript">
+        var room_id = 1;
+        var grade = 0;
+        var visiterName = "";
+        var live_lock = 0;
+        var live_img = "";
+        var live_type = 1;
+        var isMember = 0;
+        var page_type = 0;// 小窗口直播
+        var window_type = 0;// frame内容
+        var freeToke = 0;
+        var visters0 = [{"userLevel": "0", "userNick": "用户-JKN837"}, {
+            "userLevel": "0",
+            "userNick": "用户-CEA281"
+        }, {"userLevel": "0", "userNick": "用户-KDI547"}, {"userLevel": "0", "userNick": "用户-DUP125"}, {
+            "userLevel": "0",
+            "userNick": "用户-PDT881"
+        }, {"userLevel": "0", "userNick": "用户-HMR371"}, {"userLevel": "0", "userNick": "用户-AXW885"}, {
+            "userLevel": "0",
+            "userNick": "用户-MMW194"
+        }, {"userLevel": "0", "userNick": "用户-SLL201"}, {"userLevel": "0", "userNick": "用户-VLO336"}, {
+            "userLevel": "0",
+            "userNick": "用户-GBT936"
+        }, {"userLevel": "0", "userNick": "用户-HAP906"}, {"userLevel": "0", "userNick": "用户-TEJ220"}, {
+            "userLevel": "0",
+            "userNick": "用户-ETO428"
+        }, {"userLevel": "0", "userNick": "用户-WOR940"}, {"userLevel": "0", "userNick": "用户-XXO567"}, {
+            "userLevel": "0",
+            "userNick": "用户-SIG947"
+        }, {"userLevel": "0", "userNick": "用户-UUT331"}, {"userLevel": "0", "userNick": "用户-MFX382"}, {
+            "userLevel": "0",
+            "userNick": "用户-CGG851"
+        }, {"userLevel": "0", "userNick": "用户-UXT461"}, {"userLevel": "0", "userNick": "用户-SDF092"},
+            {"userLevel": "0", "userNick": "用户-HGJ387"}, {"userLevel": "0", "userNick": "用户-RTV874"}];
+        var visters1 = [{"userLevel": "1", "userNick": "用户-如虎添翼"}, {
+            "userLevel": "1",
+            "userNick": "用户-一叶知秋"
+        }, {"userLevel": "1", "userNick": "用户-信仰"}, {"userLevel": "1", "userNick": "用户-阿潘"}, {
+            "userLevel": "1",
+            "userNick": "用户-栩栩如生"
+        }, {"userLevel": "1", "userNick": "用户-胡一开"}, {"userLevel": "1", "userNick": "用户-小雨滴滴"}, {
+            "userLevel": "1",
+            "userNick": "用户-零度"
+        }, {"userLevel": "1", "userNick": "用户-夜归零"}, {"userLevel": "1", "userNick": "用户-龙大侠"}, {
+            "userLevel": "1",
+            "userNick": "用户-鳄鱼的眼泪"
+        }, {"userLevel": "1", "userNick": "用户-天天涨停"}];
+        var visters2 = [{"userLevel": "2", "userNick": "用户-戴维"}, {"userLevel": "2", "userNick": "用户-春熙"}, {
+            "userLevel": "2",
+            "userNick": "用户-王大新"
+        }, {"userLevel": "2", "userNick": "用户-罗齐燕"}, {"userLevel": "2", "userNick": "用户-清风徐徐"}, {
+            "userLevel": "2",
+            "userNick": "用户-等风来"
+        }, {"userLevel": "2", "userNick": "用户-大大先生"}, {"userLevel": "2", "userNick": "用户-天亮"}];
+        var visters3 = [{"userLevel": "3", "userNick": "用户-海角天涯"}, {
+            "userLevel": "3",
+            "userNick": "用户-牛牛牛"
+        }, {"userLevel": "3", "userNick": "用户-云飞翔"}, {"userLevel": "3", "userNick": "用户-金主主"}, {
+            "userLevel": "3",
+            "userNick": "用户-无忧"
+        }, {"userLevel": "3", "userNick": "用户-张小萍"}];
+        var visters4 = [{"userLevel": "4", "userNick": "用户-岁月静好"}, {"userLevel": "4", "userNick": "用户-小轩"}, {
+            "userLevel": "4",
+            "userNick": "用户-徐冬云"
+        }, {"userLevel": "4", "userNick": "用户-王先生"}];
+        var chatName = "";
+        var crossName = "";
+        var timestamp = "";
+        var sign = "";
+        var guest = "";
+        var uri = "rtmp://video.lzyunying.com/live/insurance";
+        var url = "http://wtszb.lzyunying.com:9102/chat_room1";
+        //theme 对象
+        var time1 = 1.5;
+        var time2 = 5;
+        var pc_top_qq_img_in = '';
+        var index_end_time = '';
+        var pc_index_div_qq_img = '';
+        var notice_qq_img = '';
+        var pc_banner_img = '';
+        var pc_div_lecture_qq_img = '';
+        var pc_top_teacher_qq_img = '';
+        var pc_login_control_qq_img = '';
+        var start_num = '0';
+        var start_time = '0';
+        var minusNum = '360';
+        var loginStatus = '0';
+        var controlType = '1';
+        var controlLong = '0';
+        var lockNotic = '';
+    </script>
+    <!--IE兼容placeholder-->
+    <script type="text/javascript">
+
+        $(function () {
+            if (!placeholderSupport()) {   // 判断浏览器是否支持 placeholder
+                $('[placeholder]').focus(function () {
+                    var input = $(this);
+                    if (input.val() == input.attr('placeholder')) {
+                        input.val('');
+                        input.removeClass('placeholder');
+                    }
+                }).blur(function () {
+                    var input = $(this);
+                    if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                        input.addClass('placeholder');
+                        input.val(input.attr('placeholder'));
+                    }
+                }).blur();
+            }
+            ;
+        })
+        function placeholderSupport() {
+            return 'placeholder' in document.createElement('input');
+        }
+    </script>
+
+    <script src="/r/cms/www/default3/js/xMarquee.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $("#x1").xMarquee();
+            //$("#x1").xMarquee({temp:2,backMarquee:'backMarquee'});
+        })
+
+        function backMarquee(id, con) {
+            $("#backMarquee").html(id + "::::::::::::::::::::" + con);
+        }
+    </script>
+</head>
+<body>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+    <img src='http://wtszb.lzyunying.com/${res}/images/300-300.jpg'/>
+</div>
+<input type="hidden" id="toSid" value="ALL"/>
+<input type="hidden" id="toNick"/>
+<input type="hidden" id="toUid"/>
+[#include "../include/弹窗.html"/]
+<img src="/r/cms/www/default3/images/baoxian/e-img-12.png"
+     style="position:absolute; z-index:0; height:100%; width:100%;"/>
+<div class="bg_color">
+    <!--顶部开始-->
+    <div class="top_mian clearfix dian_60" id="navigate">
+    </div>
+    <!--顶部结束-->
+    <script type="text/javascript">
+        var salesmanRoomQq = "3001296402,3001295018,3001713290,3001738779,3001740373,3001782964,3001271323,3001234767,3001236452,3001259812,3001260291,3001258523,3001264172,3001257191,3001273122,3001712894,3001742819,3001720518,3001480283,3001723725,3001247063,3001787501,3001292734,3001294781,3001428563,3001419117,3001431988,3001413055,3001298862,3001746693,3001747181,3001740767,3001768431,3001722415,3001712178,3001458566,3001269600,3001298768,3001437851,3001299512,3001298463,3001231916,3001728473,3001762160,3001273965,3001294290,3001290934,3001772852,3001781743,3001257695,3001452858,3001713094,3001722939,3001253284,3001298064,3001751147,3001285952,3001295465,3001465297,3001499257,3001752711,3001298960,3001245796,3001246737,3001278770,3001247895,3001248952,3001263458,3001255781,3001266957,3001266453,3001255284,3001257732,3001258031,3001268082,3001287697,3001267066,3001274763,3001760073,3001747701,3001291596,3001235052,3001273802,3001437785,3001421003,3001483057,3001272110,3001233439,3001233828,3001243760,3001245537,3001265128,3001260538,3001256245,3001265940,3001252909,3001259794,3001254500,3001266823,3001254090";
+    </script>
+
+    <script type="text/javascript">
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    </script>
+    <!--主体部分-->
+    <div class="mian_box clearfix">
+        <div id="zb_left">
+            <div class="zb_logo " id="navigateLogo">
+                <a href="/"><img class="fl" src="/r/cms/www/default3/images/baoxian/e-img-04.png" width="189"
+                                 height="50"
+                                 alt=""/></a>
+            </div>
+            <!-- content -->
+            <div class="notice_box dian_50" id="onLineUser">
+                <span class="notice_box_icon"></span>
+                <span style="padding-left:5px;color:#fff;">在线用户</span>
+            </div>
+            <div class="room-list mCustomScrollbar dian_20" data-mcs-theme="minimal-dark" id="User_ListInfo_div">
+                <ul id="parentid" class="dian_20">
+                </ul>
+            </div>
+
+            <!--<div class="zb_2weima dian_80 " id="QRcode">-->
+            <!--<div class="zb_2weima_desc">官方微信服务号</div>-->
+            <!--<img src="/r/cms/www/default3/images/baoxian/e-img-05.png"/>-->
+            <!--</div>-->
+        </div>
+        <div id="main" class="clearfix main">
+            <div id="zb_min">
+                <div class="zb_notice ">
+
+                    <span class="zb_notice_desc">通知栏</span>
+                    <div id="x1" class="xMarquee">
+                        <ol>
+                            <li>${theme.marquee!}</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+                <!--右栏开始-->
+                <!--聊天内容框架开始-->
+                <div class="dian_30" id="zb_right_chat" style="position:relative">
+                    <div class="huodong_dw " style="background:none;">
+                        <a href="javascript:void(0)" onclick="show('choujiang')">
+                            <img src="/r/cms/www/default3/images/cj_bn.png" alt="我要抽奖"></a>
+                    </div>
+
+                    <div id="Chat_ListInfo_div" data-mcs-theme="minimal-dark">
+                        <ul class="Chat_ListInfo" id="Chat_ListInfo">
+                        </ul>
+                    </div>
+                    <div class="chat_mian">
+                        <div class="chat_qq" id="chat_qq_div">
+                            <div class="biaoqing_box">
+                                <ul class="clearfix">
+                                    <li><a href="javascript:void(0)" onclick="sendFace(0);"><img
+                                            src="/r/cms/www/default3/images/baoxian/e-img-16.png"/></a></li>
+                                    <li><a href="javascript:void(0)" onclick="sendFace(1);"><img
+                                            src="/r/cms/www/default3/images/baoxian/e-img-17.png"/></a></li>
+                                    <li><a href="javascript:void(0)" onclick="sendFace(2);"><img
+                                            src="/r/cms/www/default3/images/baoxian/e-img-18.png"/></a></li>
+                                    <li><a href="javascript:void(0)" onclick="sendFace(3);"><img
+                                            src="/r/cms/www/default3/images/baoxian/e-img-19.png"/></a></li>
+                                    <li><a href="javascript:void(0)" onclick="sendFace(4);"><img
+                                            src="/r/cms/www/default3/images/baoxian/e-img-20.png"/></a></li>
+                                    <li><a href="javascript:void(0)" onclick="sendFace(5);"><img
+                                            src="/r/cms/www/default3/images/baoxian/e-img-21.png"/></a></li>
+
+
+                                </ul>
+                                <div class="show_font" id="tips"></div>
+                            </div>
+                        </div>
+                        <div id="chat_send">
+                            <div id="chat_Msg" class="clearfix">
+                                <div id="chat_textArea">
+                                    <textarea id="Chat_Send_Msg" name="content" style="width:77%;height:46px;"
+                                              onkeyup="isOver(35);" maxlength="35"
+                                              placeholder="请输入您要发送的内容..."></textarea>
+                                </div>
+
+                                <div class="box_Fillet10 clearfix" id="divSendButton" onclick="sendMessage()">
+                                    <span class=" SendButton-icon"></span>
+                                    <span class=" SendButton-desc">发送</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="zb_right">
+                <div class="dian_30" id="zb_peixunshi">
+                    <div class="pxs-wrap clearfix">
+                        <div class="pxs-img">
+                            <img class="fl" id="teacher_img" width="90" height="90">
+                        </div>
+                        <div class="fl">
+                            <div class="pxs-title">
+                                <div>
+                                    <span id="teacher_name"></span>
+                                    <span id="teacher_popular" class="pxs-icon"></span></div>
+                            </div>
+                            <div class="pxs-con" id="teacher_intr"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="liveRoom" class="prism-player">
+                </div>
+                <div class="mid_bottom dian_40" id="liveInfo">
+                    <div class="banner_lb" id="banner_lb">
+                        <a href="javascript:void(0)" onclick="show('in_tanchuang')"><img
+                                src="${theme.pc_banner_img!}?53" width="100%" alt="banner"/></a>
+                    </div>
+
+                </div>
+            </div>
+            <!--<div id="navMenu" >-->
+            <!--<ul class="Function_nav clearfix">-->
+            <!--<li><a target="_blank" href="http://wts.lzyunying.com/"><s class="allIcon nav_ico1"></s>梧桐官网</a></li>-->
+            <!--<li><a target="_blank" href="http://wts.lzyunying.com/dz/"><s class="allIcon nav_ico2"></s>私人订制</a></li>-->
+            <!--<li><a target="_blank" href="http://wts.lzyunying.com/wylp/"><s class="allIcon nav_ico3"></s>无忧理赔</a></li>-->
+            <!--<li><a target="_blank" href="http://wts.lzyunying.com/gywm/"><s class="allIcon nav_ico4"></s>关于我们</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        </div>
+        <!-- 私聊 begin -->
+        <div class="sl_panelbar btn_yj" style="display:none;" id="noticeDiv">
+            <div class="sl_anniu"><a href="javascript:void(0)" class="sl_close" onclick="closeNotice()">X</a></div>
+            <div class="sl_tx" id="custName"></div>
+            <p><a href="javascript:void(0)" id="noticeMsg">给您发送了一条信息!</a></p>
+        </div>
+        <div class="say_box" id="sayToHe" style="display:none;">
+            <a href="javascript:void(0)" onclick="sayTo()" onmouseout="hide('sayToHe')">对TA说</a>
+        </div>
+        <!-- 私聊 begin -->
+        <div class="sl_panelbar btn_yj" style="display:none;" id="noticeDiv">
+            <div class="sl_anniu"><a href="javascript:void(0)" class="sl_close" onclick="closeNotice()">X</a></div>
+            <div class="sl_tx" id="custName"></div>
+            <p><a href="javascript:void(0)" id="noticeMsg">给您发送了一条信息!</a></p>
+        </div>
+        <div class="say_box" id="sayToHe" style="display:none;">
+            <a href="javascript:void(0)" onclick="sayTo()" onmouseout="hide('sayToHe')">对TA说</a>
+        </div>
+        <div class="sl_box clearfix" style="display:none;" id="talkChat">
+            <div class="sl_l fl" id="talkLeft">
+                <ul id="talkToCusts">
+                </ul>
+            </div>
+            <div class="sl_r fl" id="talkRight">
+                <div class="sl_anniu"><a href="javascript:void(0)" class="sl_close">X</a></div>
+                <div class="sl_r_t" id="talkCustName"></div>
+                <div class="sl_li">
+                    <div id="speakBoxes" class="mCustomScrollbar" data-mcs-theme="minimal-dark">
+                        <div class="speak_box" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="sl_div_send">
+                        <div>
+                            <textarea id="privateChatMsg" name="privateContent" style="width:100%;"></textarea>
+                        </div>
+                        <input name="发送" type="submit" class="sl_send" onclick="sendPrivateMessage()" value="发送"/>
+                    </div>
+                </div>
+            </div>
+            <div id="sayToMsgDiv" style="display:none;">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <!-- 发言提示弹窗-->
+        <div class="tan_div box_bg60 " style="display:none;" id="control_div">
+            <div class="tan_content tan_600" style="top:20%">
+                <div class="tan_close">
+                    <a href="javascript:void(0)" onclick="hide('control_div')"></a>
+                </div>
+                <div class="tan_title">提示信息</div>
+                <div class="tan_padding" style="font-size:16px;line-height:24px;">
+                    <p id="fayan_text">您的发言时间间隔为15秒,还有<span id="chatTimeSpan"></span>秒！
+                    </p>
+                    <br/>
+                    <!-- <div class="tan_qq1 clearfix" id="control_qq">
+                     </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 打开页面直接弹窗 -->
+    <div class="tan_div  " id="in_tanchuang">
+        <div class="tan_content tan_800 box_Fillet3">
+            <div class="tan_close2">
+                <a href="javascript:void(0)" onclick="hide('in_tanchuang')"></a>
+            </div>
+            <div class="in_tan_bg">
+                [#if theme.is_start_index_end_time ==1]
+                <div class="yx_time1" id="timer1"></div>
+                [/#if]
+                <!--<div class="tan_qq" style="top:230px;" id="indexQQ">
+        </div>-->
+                <img src="${theme.pc_index_div_img!}"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- 锁屏停播提示-->
+    <div class="tan_div hidden" id="suoping_ts">
+        <div class="tan_600 box_Fillet3 tb_tan">
+            <div class="tan_close2">
+                <a href="javascript:void(0)" onclick="hide('suoping_ts')"></a>
+            </div>
+            <div class="suoping_ts">
+                <div class="suoping_ts_p">现时段为休息时间，请您在以下时段收看直播</div>
+                <div class="suoping_ts_time">
+                    <h5>直播时间</h5>
+						   <span id="lockNotice">
+                           现时段为停播时间,请咨询您的保险顾问
+                           </span>
+                    <a href="javascript:void(0)" onclick="hide('suoping_ts')"><img
+                            src="/r/cms/www/default3/images/tb_btn.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 网络异常弹窗 -->
+<div class="tan_div hidden" id="network">
+    <div class="tan_content tan_800 box_Fillet3" style="top:20%">
+        <div class="tan_close2">
+            <a href="javascript:void(0)" onclick="hide('network')"></a>
+        </div>
+        <div class="in_tan_bg">
+            <img src="/r/cms/www/default3/images/network1.jpg"/>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- 停播弹窗 -->
+<div class="tan_div hidden" id="stopbroadcast_div">
+    <div class="tan_content tan_800 box_Fillet3">
+        <div class="tan_close2">
+            <a href="javascript:void(0)" onclick="hide('stopbroadcast_div')"></a>
+        </div>
+        <img width="800px" height="300px" src="${theme.pc_stopbroadcast_img!}"/>
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="/r/cms/www/default3/js/jQueryRotate.2.2.js"></script>
+<script type="text/javascript" src="/r/cms/www/default3/js/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    var setInt;
+    function turnoff(obj) {
+        $("#" + obj).hide();
+    }
+    function show(obj) {
+        $("#" + obj).show();
+    }
+    function createKF() {
+        var salesmanQq = isNullConvert(salesmanRoomQq).split(",");
+        var length = salesmanQq.length;
+        var qqIndex = Math.floor(Math.random() * length);
+        var url = 'tencent://message/?uin=' + salesmanQq[qqIndex] + '&Site=QQ&Menu=yes';
+        window.open(url);
+    }
+    function lottery() {
+//		$("#startbtn").hide();
+        $.ajax({
+            url: '/lottery/gotoLottery.htm',
+            type: 'get',
+            dataType: 'json',
+            cache: false,
+            error: function () {
+                alert('出错了！');
+                return false;
+            },
+
+            success: function (json) {
+                if (json.success == 1) {
+                    var angle = parseInt(json.offset); //角度
+                    var msg = json.info; //提示信息
+                    var lot = json.lottery;
+                    $("#disk").rotate({ //inner内部指针转动，outer外部转盘转动
+                        duration: 5000, //转动时间
+                        angle: 0, //开始角度
+                        animateTo: 3600 - angle, //转动角度
+                        easing: $.easing.easeOutSine, //动画扩展
+                        callback: function () {
+                            if (lot == 1) {
+                                $("#lotteryCode").text(json.lotteryCode);
+                                $("#wingoods").text(json.info);
+                                //createKF();
+                                show('tan_div2');
+                                $("#timeRun").hide();
+                                $("#start").show();
+                                $("#startbtn").show();
+                            } else {
+                                var timestemp = json.intervalTime / 60000;
+                                var timestr = "";
+                                timestr = Math.ceil((json.intervalTime) / 1000) + "秒";
+                                $("#intervalTime").text(timestr);
+                                $("#start").hide();
+                                $("#timeRun").show();
+                                show('tan_div');
+                                var tim = json.intervalTime;
+                                setInt = setInterval(function () {
+                                    tim = timeRun(tim);
+                                    if (tim <= 0) {
+                                        $("#timeRun").hide();
+                                        $("#start").show();
+                                        $("#startbtn").show();
+                                        clearInterval(setInt);
+                                    }
+                                }, 1000);
+                            }
+                        }
+                    });
+                } else if (json.success == 0) {
+                    alert(json.info);
+                    $("#timeRun").hide();
+                    $("#start").show();
+                    $("#startbtn").show();
+                } else if (json.success == -1) {
+                    $("#lotteryCode").text(json.lotteryCode);
+                    $("#wingoods").text(json.info);
+                    //createKF();
+                    show('tan_div2');
+                    $("#timeRun").hide();
+                    $("#start").show();
+                    $("#startbtn").show();
+                } else if (json.success == -2) {
+                    var timestemp = json.intervalTime / 60000;
+                    var timestr = "";
+                    var timestr = "";
+                    timestr = Math.ceil((json.intervalTime) / 1000) + "秒";
+                    $("#intervalTime").text(timestr);
+                    $("#start").hide();
+                    $("#timeRun").show();
+                    show('tan_div');
+                    var tim = json.intervalTime;
+                    setInt = setInterval(function () {
+                        tim = timeRun(tim);
+                        if (tim <= 0) {
+                            $("#timeRun").hide();
+                            $("#start").show();
+                            $("#startbtn").show();
+                            clearInterval(setInt);
+                        }
+                    }, 1000);
+                }
+            }
+        });
+    }
+    function timeRun(intervalTime) {
+        $("#time").text(Math.ceil(intervalTime / 1000 - 1));
+        return intervalTime - 1000;
+    }
+    function neverJoin() {
+        var exp = new Date();
+        exp.setTime(exp + 1000 * 60 * 60 * 24 * 365);
+        document.cookie = "neverJoin=1;" + "expires=" + exp.toGMTString();
+        turnoff('main');
+    }
+
+    function closeDiv(id) {
+        $("#" + id).hide();
+    }
+</script>
+
+
+<!-- 私聊 end -->
+<script type="text/javascript" src="/thirdparty/scroll/jquery.mCustomScrollbar.js"></script>
+<script src="/thirdparty/scroll/jquery.mousewheel.min.js"></script>
+<link rel="stylesheet" href="/thirdparty/scroll/jquery.mCustomScrollbar.css"/>
+<!--[if lt IE 9]>
+<script src="//r/cms/json2.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/thirdparty/socket.io.js"></script>
+<script type="text/javascript" src="/r/cms/www/default3/js/start.js?20160605_01"></script>
+<script type="text/javascript" src="/r/cms/www/default3/js/room.api.js?20160613_02"></script>
+<script type="text/javascript" src="/r/cms/www/default3/js/room.chat.js?20160613_02"></script>
+<script type="text/javascript" src="/r/cms/www/default3/js/room.init.js?20160613_02"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
