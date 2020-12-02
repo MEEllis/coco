@@ -1,0 +1,57 @@
+<!-- <template> -->
+<view class="main">
+  <!-- 头像 -->
+  <view class="top">
+    <view tt:if="{{loginState==1}}">
+      <view class="headbox">
+        <image class="image" mode="widthFix" src="{{userInfo.avatarUrl}}" />
+      </view>
+      <view class="username">
+        <text>{{userInfo.nickName}}</text> 
+      </view>
+    </view>
+    <view tt:if="{{loginState==0}}" bindtap="bindLogin">
+        <view class="headbox">
+            <image class="image" mode="widthFix" src="myhomeimg/renwu01.png" />
+          </view>
+          <view class="username">
+            <text>请先登录</text>
+          </view>
+    </view>
+  </view>
+  </view>
+  <!-- 更多 -->
+  <view class="listone" style="color:#414243;font-weight:bold;">
+    <text>更多功能</text>
+  </view>
+  <!-- 我的钱包 -->
+  <view class="listone">
+    <view class="imgbox">
+      <image class="iconbox" mode="widthFix" src="myhomeimg/quan.png" />
+    </view>
+    <view class="titlebox box"><text>我的优券包</text></view>
+    <view class="countbox box"><text>共0张</text></view>
+    <view class="right box">
+      <image class="iconrightbox" mode="widthFix" src="myhomeimg/right.png" />
+    </view>
+  </view>
+  <!-- 我的发布 -->
+  <view class="listone">
+    <view class="imgbox">
+      <image class="iconbox" mode="widthFix" src="myhomeimg/shuocang.png" />
+    </view>
+    <view class="titlebox box"><text>我的发布</text></view>
+    <view class="right">
+      <image class="iconrightbox" mode="widthFix" src="myhomeimg/right.png" />
+    </view>
+  </view>
+  <!-- 我的收藏 -->
+  <view class="listone">
+    <view class="imgbox">
+      <image class="iconbox" mode="widthFix" src="myhomeimg/fabu.png" />
+    </view>
+    <view class="titlebox box"><text>我的收藏</text></view>
+
+  </view>
+</view>
+<!-- </template> -->

@@ -1,0 +1,411 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) ByteDance Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/* .flex-wrapper {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  flex:1
+} */
+
+/* top */
+.flex-item-top {
+  /* width: 300rpx;
+  height: 300rpx; */
+  display: flex;
+  text-align: center;
+  line-height: 50rpx;
+  color: #fff;
+   margin-top:10rpx;
+   font-size:30rpx;
+}
+
+.coupon{
+  background:url(./src/indeximg.jpg);
+-moz-background-size:63px 100px; /* 老版本的 Firefox */
+background-size:63px 100px;
+background-repeat:no-repeat;
+}
+.imagelog{
+	width:15%;
+	height:100rpx;
+	margin:0rpx  auto;
+	margin-left:50rpx;
+  float:left;
+  /* border: 2rpx solid red; */
+}
+.flex-item.hover-item {
+  opacity: 0.6;
+}
+
+.flex-item-v {
+  align-self: center;
+  width: 94%;
+  height:33.33%;
+  text-align: center;
+  line-height: 160rpx;
+  margin:0rpx auto;
+  space-around:1;
+  color: #fff;
+  background-color: #FFFFFF;
+  box-shadow: 5px -3px 1px 1px #ECECEC;
+}
+
+.top-btn{
+   /* display:inline-block; */
+   font-size:20rpx;
+   height:40rpx;
+   margin:0px auto;
+      padding:0px;
+      text-align:left;
+      line-height:20rpx;
+       /* background:#F4355C; */
+
+}
+
+.itembtn{
+     display:inline-block;
+     background:#F4355C;
+     height:16rpx;
+      margin:0px auto;
+      padding:14rpx;
+      color:#FFFFFF;
+     	border-radius: 16rpx;
+}
+.consume{
+  margin-left:30rpx;
+}
+.topicon{
+  width:40rpx;
+  height:30rpx;
+  /* border:2rpx solid red; */
+  margin-top:8rpx;
+}
+/* 好店推荐 */
+.flex-item-v-yh{
+	display:inline-block;
+	float:left;
+	color:black;
+
+}
+
+.yh{
+  width:100%;
+  height:450rpx;
+	border-radius: 16rpx; 
+
+}
+.iformlist{
+  color:black;
+}
+.toptitle{
+  width:100%;
+  height:120rpx;
+  margin:0rpx auto;
+  /* background:yellow; */
+  /* border:2rpx solid red; */
+}
+        
+.lefttitle{
+  float:left;
+   width:45%;
+  height:120rpx;
+   /* border:2rpx solid red; */
+   padding:0px;
+}
+.haodianlog{
+  width:300rpx;height:60rpx;
+ line-height:40rpx;
+ padding-top:10rpx;
+}
+.haodianlogimg{
+   width:200rpx;height:130rpx;
+}
+
+.fuzeren{
+  /* height:100rpx; */
+  width:290rpx;
+  margin-top:0px;
+  line-height:40rpx;
+  /* border:2rpx solid red; */
+  font-size:30rpx;
+ 
+}
+.haodiantuijain{
+    width:300rpx;height:60rpx;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.iformlist{
+    clear:both;
+    display: flex;
+    width:100%;
+    height:300rpx;
+    flex-direction:row;
+    /* border: 2rpx solid red; */
+   overflow-x: scroll;
+    flex-wrap: nowrap;
+    flex:1;
+
+      /* animation: fade 2s linear;
+  animation-iteration-count: infinite; */
+}
+
+
+.itempeople{
+    width:200rpx;
+    height:274rpx; 
+    
+     /* background:yellow; */
+}
+.itempeople:not(:first-child)
+{
+  margin-left:20rpx;
+}
+.people{
+    width:200rpx;
+    height:100rpx;
+     /* border:2rpx solid red; */
+}
+.jianjie{
+   width:100%;
+    height:302rpx;
+    /* background:#9B587B; */
+    margin-top:36rpx;
+    color:#FFFFFF;
+    position: relative;
+    }
+  .peoplename{
+    width:100%;
+    height:10rpx;
+    /* border:2rpx solid red; */
+
+      position: absolute;
+    top: -82rpx;
+    font-size:30rpx;
+    
+    /* left: 40px; */
+  }
+
+    .fonts{
+      /* display:inline-block; */
+      width:100%;
+      height:20rpx;
+      position: relative;
+      /* padding:8rpx; */
+      word-wrap: break-word;
+      word-break: normal;
+
+  
+  }
+  .shanchang{
+  
+    top: -50rpx;
+    font-size:16rpx;
+    /* margin-top:20rpx; */
+
+  }
+  .datilinfo{
+    top: -45rpx;
+    font-size:14rpx;
+    margin-top:20rpx;
+
+  }
+
+/* 热门景点 */
+.flex-item-v_hot{
+	margin:20rpx auto;
+	/* border: 2rpx solid red; */
+
+}
+
+.hotcontant{
+	  display: flex;
+    width:100%;
+	    flex-direction:row;
+    /* border: 2rpx solid red; */
+     flex-wrap: nowrap;
+     flex:1
+}
+.imageitem{
+  width:100%;
+	height:398rpx;
+	margin:0px auto;
+    /* border: 2rpx solid red; */
+}
+
+.hotimg{
+	/* border: 2rpx solid red; */
+}
+.hotitem{
+  	 width:100%;
+  	height:304rpx;
+	margin:0px auto;
+  /* border: 2rpx solid red; */
+  /* text-align:right; */
+}
+
+.toprigth{
+	display:inline-block;
+  justify-content:flex-start;
+  /* border:1px solid red; */
+  margin:0px auto;
+  width:70%
+ 
+}
+
+/* 景区攻律 */
+.jqglhotimg{
+     display: flex;
+     width:100%;
+	   flex-direction:row;
+    /* border: 2rpx solid red; */
+     flex-wrap: wrap ;
+      justify-content:space-around;
+      
+}
+.qglhotimg{
+  width:45%;
+}
+
+.jqgltitle{
+    width:300rpx;
+    overflow: hidden;
+      white-space: nowrap;
+    text-overflow:ellipsis;
+  
+}
+/* //共同样式 */
+.common{
+     line-height:50rpx;
+     font-size:30rpx;
+     text-align:left
+}
+.item{
+   background-color: #FFFFFF;
+  box-shadow: 5px -3px 1px 1px #ECECEC;
+}
+/* .date{
+  font-size:30rpx;
+  color:#BFBFBF
+} */
+.hottitle{
+	text-align:left;
+	padding:30rpx;
+	padding-left:0rpx;
+	line-height:0rpx;
+	/* margin:20px 20rpx; */
+  font-weight:bold
+}
+
+.d1{
+  background:red;
+
+}
+.d2{
+  background:yellow;
+
+}
+.d3{
+  background:blue;
+
+}
+.scroll-view-item-h{
+  width:48%;
+  display:inline-block;
+  margin:0rpx auto;
+  text-align:left;
+
+}
+.scroll-view-item-h:not(:first-child){
+       margin-left:30rpx;   
+}
+.scroll-view-wrap{
+    margin:0rpx auto;
+   overflow-x:scroll;
+  white-space:nowrap;
+}
+
+.scroll-view{
+    overflow-x:hidden;
+}
+
+.paishe{
+  position: fixed;
+  bottom: 130rpx;
+  right: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: #F4355C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.paishe  image{
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+}
+
+.toptitles{
+  width:80%;
+    margin:0rpx auto;
+  display: flex;
+   justify-content: space-between;
+   flex:1;
+ }
+ 
+ .changescolor{
+     color:#DF415F;
+ }
+ .vodielist{
+     width:95%;
+    margin:0rpx auto;
+  display: flex;
+   justify-content: space-between;
+   flex:1;
+   font-size:32rpx;
+   line-height:65rpx;
+   margin-top:30rpx;
+ }
+ .lefthot{
+   width:50%;
+   height:200rpx;
+     /* border:2rpx solid red; */
+ }
+ .video{
+   width:100rpx;
+   height:200rpx;
+ }
+ .righthot{
+    width:50%;
+   height:200rpx;
+     /* border:2rpx solid red; */
+ }
+ .likeicon,.headicon{
+     width:35rpx;
+     height:35rpx;
+ }

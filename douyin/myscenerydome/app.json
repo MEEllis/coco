@@ -1,0 +1,38 @@
+{
+  "pages": ["pages/index/index", "pages/list/list", "pages/myhome/myhome"],
+  "window": {
+    "navigationBarTitleText": "好店铺拍拍"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"src/toolbaricon/home_before.png",
+        "selectedIconPath":"src/toolbaricon/home.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "列表",
+        "iconPath":"src/toolbaricon/list_before.png",
+        "selectedIconPath":"src/toolbaricon/list.png"
+      },{
+        "pagePath": "pages/myhome/myhome",
+        "text": "我的",
+         "iconPath":"src/toolbaricon/user_before.png",
+        "selectedIconPath":"src/toolbaricon/user.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于提供个性化服务及体验"
+    }
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  }
+}

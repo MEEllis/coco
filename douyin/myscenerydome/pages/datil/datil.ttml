@@ -1,0 +1,16 @@
+
+<!-- <template > -->
+    <view>
+        <view class="bigtitle"><text>{{bigtitle}}</text></view>
+        <view class="biddate"><text>{{biddate}}</text></view>
+        <view class="midtitle"><text>{{midtitle}}</text></view>
+        <view class="show-code">
+        <text>{{htmlSnip}}</text>
+        </view>
+        <view>
+            <image class="imageitem" mode="aspectFit" src="{{itemName.hoturl}}" width="500rpx"  height="500rpx"/>
+            <image class="imageitem" mode="aspectFit" src="{{itemName.hoturl}}" width="500rpx"  height="500rpx"/>
+            <image class="imageitem" mode="aspectFit" src="{{itemName.hoturl}}" width="500rpx"  height="500rpx"/>
+        </view>
+    </view>
+<!-- </template> -->

@@ -1,0 +1,6 @@
+.contant{
+  width:100%;
+  margin:0rpx auto;
+  padding:0rpx;
+  /* border:2rpx solid red; */
+}

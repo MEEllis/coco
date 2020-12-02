@@ -1,0 +1,13 @@
+{
+    "setting": {
+        "autoCompile": true,
+        "es6": true,
+        "minified": false,
+        "mockUpdate": false,
+        "newFeature": false,
+        "postcss": false,
+        "urlCheck": false
+    },
+    "appid": "tt9cf4ea4903cf59ba",
+    "projectname": "好店铺拍拍"
+}

@@ -1,0 +1,23 @@
+
+<!-- <template> -->
+<!-- 列表 -->
+    <view class="flex-wrapper flex-conten" style="">    
+        <view class="litem" tt:for="{{llist}}" tt:for-index="idx" tt:for-item="itemName" >   
+            <view class="imagebox">
+                <image  mode="widthFix" src="{{itemName.lurl}}"/>
+            </view>
+            <view class="jqgltitle"  style="font-size:32rpx">
+                <text>{{itemName.ltitle}}</text>
+            </view>
+        
+            <view class="jqglmoney" style="color:#E1485D;font-size:30rpx">
+               <text>{{itemName.lmoney}}</text>
+            </view>
+            <view class="jqgldate date" style="font-size:24rpx"> 
+                <text>{{itemName.ldate}}</text>
+            </view>
+        </view>
+                
+    </view>
+<!-- </template> -->
+

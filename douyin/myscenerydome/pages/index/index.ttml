@@ -1,0 +1,158 @@
+<!-- <template> -->
+<view class="container">
+  <view class="page-section">
+
+    <!-- top -->
+    <view class="flex-item-v coupon item" style="background:url(indeximg/topbg.jpg);color:black">
+      <image class="imagelog topleft" mode="aspectFit" src="{{logurl}}" />
+      <view class="flex-wrapper toprigth " style="flex-direction:column;">
+        <view class="flex-item-top" style="background-color: #FFFFFF;color:black; font-weight:bold;text-align:left;">
+          好店铺拍拍--景区攻律</view>
+        <view class="top-btn">
+          <view class="time itembtn">
+            <text>09:00-19:00</txet>
+          </view>
+          <view class="consume itembtn">
+            <text>人均消费9.99元</txet>
+          </view>
+        </view>
+        <view class="flex-item-top" style="color:#B1B1B3;text-align:left;font-size:22rpx;">
+          <image class="topicon" mode="widthFix" src="indeximg/postion.png" />
+          <text bindtap="bindTopadress"> {{topadress.address}}
+            <text style="margin-left:10rpx">{{jl}}</text>
+          </text>
+        </view>
+        <view class="flex-item-top" style="color:#B1B1B3;text-align:left;font-size:22rpx;">
+          <image class="topicon" mode="widthFix" src="indeximg/telphone.png" />
+          <text style="margin-left:10rpx" bindtap="bindPhoneNumber">{{phoneNumber}}</text>
+        </view>
+        <viex>
+      </view>
+
+      <!-- yh -->
+      <view class="flex-item-v item yh item" style="background-color:#031432;">
+        <view class="toptitle">
+          <view class="lefttitle">
+            <view class="haodianlog">
+              <image class="haodianlogimg" mode="widthFix" src="indeximg/haodianlog.png" />
+            </view>
+
+            <view class="fuzeren"><text>各团队负责人简介</text></view>
+          </view>
+          <view class="righttitle">
+            <view>
+              <image class="haodiantuijain" mode="widthFix" src="indeximg/haodiantuijain.png" />
+            </view>
+          </view>
+        </view>
+        <view class="iformlist">
+          <view class="itempeople" tt:for="{{peoplelist}}" tt:for-index="idx" tt:for-item="itemName">
+            <view class="people">
+              <image mode="widthFix" src="{{itemName.headimg}}" style="width:200rpx;height:200rpx;" width="200rpx"
+                height="104rpx" />
+            </view>
+            <view class="jianjie" style="background:{{itemName.bgcolor}};">
+              <view class="peoplename">
+                <text> {{itemName.name}}</text>
+              </view>
+              <view class="shanchang fonts">
+                <text>擅长: {{itemName.goodat}}</text>
+              </view>
+              <view class="datilinfo fonts">
+                <text>{{itemName.others}}</text>
+              </view>
+
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- hot -->
+      <view class="flex-item-v_hot item" style="">
+        <view class="hottitle"> <text>优惠券区域</text></view>
+        <view class="hotcontant common">
+          <scroll-view class="scroll-view" scroll-x>
+            <view class="scroll-view-wrap" scroll-x="true" bindscroll="scroll" style="width: 100%" scroll-left="{{0}}">
+              <view class="hotimg hotitem scroll-view-item-h " tt:for="{{hotimg}}" tt:for-index="idx"
+                tt:for-item="itemName">
+                <image class="imageitem" mode="widthFix" src="{{itemName.hoturl}}" width="500rpx" height="500rpx" />
+                <view class="hottitle"> <text>{{itemName.hottitle}}</text></view>
+                <view class="hotmoney" style="color:red"> <text>{{itemName.hotmoney}}</text></view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+
+    <!-- hotgl -->
+    <view class="flex-item-v_hot item" style="">
+      <view class="hottitle"> <text>好店推荐.活动预约</text></view>
+      <view class="hotcontant common">
+        <view class="hotimg ">
+          <image class="imageitem" mode="aspectFit" src="{{url}}" />
+          <view class="hotgltext"> <text>{{hotgltext}}</text></view>
+          <view class="hotgldate date"> <text>{{hotgldate}}</text></view>
+        </view>
+      </view>
+    </view>
+    <!-- jqgl -->
+    <view class="flex-item-v_hot item" style="">
+      <view class="hottitle"> <text>抖音门店推怎么玩</text></view>
+      <view class="hotcontant jqglhotimg common">
+        <view class="qglhotimg " tt:for="{{jqgllist}}" tt:for-index="idx" tt:for-item="itemName" width="400rpx"
+          height="400rpx">
+          <image class="imageitem " mode="aspectFit" src="{{itemName.hoturl}}" style="height:280rpx;" />
+          <view class="jqgltitle">
+            <text>{{itemName.jqgltitle}}</text>
+          </view>
+          <view class="jqgldate date"> <text>{{itemName.jqgldate}}</text></view>
+          <view class="jqglmoney" style="color:#E1485D"> <text>{{itemName.jqglmoney}}</text></view>
+        </view>
+      </view>
+    </view>
+    <!-- ph -->
+    <view class="flex-item-v_hot item" style="">
+      <view class="hottitle"> <text>拍抖音.看排行</text></view>
+      <view class="hotcontant jqglhotimg common">
+        <view class="qglhotimg " tt:for="{{jqgllist}}" tt:for-index="idx" tt:for-item="itemName" width="400rpx"
+          height="400rpx">
+          <image class="imageitem " mode="aspectFit" src="{{itemName.hoturl}}" style="height:280rpx;" />
+          <view class="jqgltitle">
+            <text>{{itemName.jqgltitle}}</text>
+          </view>
+          <view class="jqgldate date"> <text>{{itemName.jqgldate}}</text></view>
+          <view class="jqglmoney" style="color:#E1485D"> <text>{{itemName.jqglmoney}}</text></view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="toptitles">
+      <view bindtop="tapName"><text>顾客视频</text></view>
+      <view bindtop="tapName"><text>顾客排行榜</text></view>
+    </view> -->
+    <!-- <view class="vodielist" tt:for="{{vediolist}}" tt:for-index="idx" tt:for-item="itemName">
+      <view class="lefthot">
+        <video id="myVideo" class="video" src={{itemName.vsrc}} binderror="videoErrorCallback" style="width: 100%;"
+          show-fullscreen-btn="{{isFullscreen}}" show-play-btn="{{isShowPlayBtn}}" loop="{{isLoopPlay}}"
+          controls="{{isShowControls}}" play-btn-position="{{playBtnPosition}}" object-fit="{{objectFitType}}"
+          poster="{{poster}}" bindtimeupdate="bindtimeupdate" bindended="bindended" bindplay="bindplay"
+          bindpause="bindpause" bindwaiting="bindwaiting" post-roll-unit-id="{{unitId}}" bindadstart="bindadstart"
+          bindadstart="bindadstart" bindadclose="bindadclose" bindaderror="bindaderror" bindadload="bindadload"></video>
+      </view>
+      <view class="righthot">
+        <view class="likeitem">
+          <image class="likeicon" mode="widthFix" src="icon/like.png" style="display:inline-block" />
+          <view class="vlike" style="display:inline-block;color:#FC645D;">{{itemName.likecount}}人喜欢</view>
+        </view>
+        <view class="likecount">
+          <image class="headicon" mode="widthFix" src="{{itemName.headicon}}" style="display:inline-block" />
+          <view class="vname" style="display:inline-block;color:#8D8E90">{{itemName.vname}}</view>
+        </view>
+        <view class="vdate" style="font-size:24rpx">发布时间：{{itemName.vadate}}</view>
+      </view>
+    </view> -->
+  </view>
+  <view class="paishe" bindtap="bindPaishe">
+    <image mode="aspectFit" src="indeximg/paishe.png" />
+  </view>
+</view>
+<!-- </template> -->
