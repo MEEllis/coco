@@ -1,0 +1,45 @@
+.wrap{
+    padding: 40rpx 30rpx;
+}
+.litem{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30rpx;
+}
+.litem .img{
+    width: 100%;
+    height: 280rpx;
+}
+.litem .desc{
+    display: flex;
+
+}
+.litem .desc .desc-item{
+    flex:1;
+}
+.litem .desc .jqgldate{
+    text-align: right;
+}
+
+.morecontent{
+    width:90%;
+     margin:0rpx auto;
+     color:#BFC0C4;
+     font-size: 24rpx;
+     /* border:2rpx solid red; */
+     text-align:center
+}
+
+
+.no-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+.no-wrap .no-img{
+    margin-top: 50rpx;
+    margin-bottom: 45rpx;
+
+}

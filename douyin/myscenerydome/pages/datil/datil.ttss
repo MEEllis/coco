@@ -1,0 +1,26 @@
+.paishe{
+    position: fixed;
+    bottom: 30rpx;
+    right: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    background: #F4355C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 24rpx;
+  }
+  
+  .paishe  image{
+    width: 70rpx;
+    height: 70rpx;
+    display: block;
+  }
+  
+  .paishe .paishe-lable{
+    position: relative;
+    top: -12rpx;
+  }

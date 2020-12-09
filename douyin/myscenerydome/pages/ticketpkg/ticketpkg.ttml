@@ -1,0 +1,34 @@
+<view class="">
+   <view class="ticket-title">
+      <view class="desc">优惠券列表</view>
+      <view class="count">共{{list.length}}张</view>
+   </view>
+   <view class="ticket-wrap">
+      <view class="ticket-item  {{activeIndex==1? 'active' : ''}}" data-index='1' bindtap="bindTicket">未使用</view>
+      <view class="ticket-item  {{activeIndex==2? 'active' : ''}}" data-index='2' bindtap="bindTicket">已核销</view>
+      <view class="ticket-item  {{activeIndex==3? 'active' : ''}}" data-index='3' bindtap="bindTicket">已过期</view>
+   </view>
+   <view class="ticket-content">
+      <view class="ticket-content-wrap" tt:for="{{list}}" tt:for-index="idx" tt:for-item="itemName">
+         <view class="ticket-content-title">
+            <image class="imagelog topleft" mode="aspectFit" src="/pages/index/indeximg/logo.jpg" />
+            <view class="title-item">好店拍拍</view>
+            <view class="btn" tt:if="{{itemName.status==1}}" data-id="{{itemName.voucher_id}}" bindtap="bindSee">查看
+            </view>
+         </view>
+         <view class="ticket-content-box">
+            <view class="quan">
+               优惠券
+            </view>
+            <view class="quan-desc">
+               <view class="count">{{itemName.cancelled_num}}</view>
+               <view class="address">{{itemName.can_cancelled_num}}</view>
+               <view class="time">{{itemName.create_time}}</view>
+            </view>
+         </view>
+      </view>
+      <view class="morecontent">
+         <text>--------{{morecontent}}--------</text>
+      </view>
+   </view>
+</view>

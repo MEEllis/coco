@@ -29,8 +29,6 @@ console.log(a===b); //报错 singleton is not a constructor
 */
 
 
-
-
 console.log(singleton.getInstance().hide());
 
 

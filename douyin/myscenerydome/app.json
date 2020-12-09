@@ -1,7 +1,8 @@
 {
-  "pages": ["pages/index/index", "pages/list/list", "pages/myhome/myhome"],
+  "pages": ["pages/index/index", "pages/list/list", "pages/myhome/myhome", "pages/datil/datil", 
+    "pages/shoucang/shoucang","pages/ticketpkg/ticketpkg","pages/ticketpakdetail/ticketpakdetail"],
   "window": {
-    "navigationBarTitleText": "好店铺拍拍"
+    "navigationBarTitleText": "优点推"
   },
   "tabBar": {
     "list": [

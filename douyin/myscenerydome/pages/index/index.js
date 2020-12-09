@@ -1,9 +1,10 @@
 
 const app = getApp();
 import util from '../../utils/util.js'
+import { getArticleList, getArticleVoucher, addUserVoucher } from '../../utils/api.js'
 Page({
    data: {
-      logurl: "indeximg/logo.png",
+      logurl: "indeximg/logo.jpg",
       // imageUrl: app.globalData.imageUrl,
       postion: "山东烟台市1",
       yhmoney: "100元千户苗寨兑换券",
@@ -41,68 +42,7 @@ Page({
       },
       jl: "",
       phoneNumber: '18184122851',
-      jqgllist: [
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267323985,3915909290&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267323985,3915909290&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267323985,3915909290&fm=26&gp=0.jpg",
-            jqgltitle: "热门景热门景点2236点2236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267323985,3915909290&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         },
-         {
-            hoturl: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267323985,3915909290&fm=26&gp=0.jpg",
-            jqgltitle: "热门景点热门景点22362236",
-            jqgldate: "2020-11-18",
-            jqglmoney: "128元"
-         }
-      ],
+      jqgllist: [],
       peoplelist: [
          {
             headimg: "indeximg/people/1.jpeg",
@@ -180,6 +120,14 @@ Page({
             vadate: "2020-1-29"
          }
       ]
+      ,
+      background: ["https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg", "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3166193275,1247763676&fm=26&gp=0.jpg"],
+      indicatorDots: true,
+      vertical: false,
+      autoplay: false,
+      circular: false,
+      interval: 2000,
+      duration: 500
    },
    binderror(err) {
       console.log('图片加载失败', err);
@@ -206,6 +154,38 @@ Page({
          },
          fail(res) {
             console.log(`getLocation调用失败`);
+         },
+      });
+      this.getData();
+   },
+   getData() {
+      getArticleList({
+         page: 1,
+         page_size: 20
+      }).then(({ data }) => {
+         //todo
+         data.items = util.dataListPage
+         this.setData(
+            {
+               jqgllist: data.items,
+            }
+         );
+      })
+      getArticleVoucher({ article_id: 2 }).then((res) => {
+         this.setData({
+            hotimg: res.data
+         })
+      })
+   },
+   onJqglClick(event) {
+      var id = event.currentTarget.dataset.id;
+      tt.navigateTo({
+         url: `/pages/datil/datil?id=${id}`,
+         success(res) {
+            console.log(res);
+         },
+         fail(res) {
+            console.log("navigateTo调用失败");
          },
       });
    },
@@ -237,5 +217,16 @@ Page({
 
          }
       })
-   }
+   },
+   bindSee(event) {
+      const { id, article_id } = event.currentTarget.dataset;
+      util.loginByTT().then(() => {
+         addUserVoucher({ voucher_id: id, article_id }).then((res) => {
+            tt.showToast({
+               title: '领取成功~',
+               icon: 'success',
+            })
+         })
+      })
+   },
 });

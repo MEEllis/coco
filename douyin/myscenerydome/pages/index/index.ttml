@@ -7,10 +7,10 @@
       <image class="imagelog topleft" mode="aspectFit" src="{{logurl}}" />
       <view class="flex-wrapper toprigth " style="flex-direction:column;">
         <view class="flex-item-top" style="background-color: #FFFFFF;color:black; font-weight:bold;text-align:left;">
-          好店铺拍拍--景区攻律</view>
+          优点推--景区攻律</view>
         <view class="top-btn">
           <view class="time itembtn">
-            <text>09:00-19:00</txet>
+            <text>营业时间：09:00-19:00</txet>
           </view>
           <view class="consume itembtn">
             <text>人均消费9.99元</txet>
@@ -24,13 +24,13 @@
         </view>
         <view class="flex-item-top" style="color:#B1B1B3;text-align:left;font-size:22rpx;">
           <image class="topicon" mode="widthFix" src="indeximg/telphone.png" />
-          <text style="margin-left:10rpx" bindtap="bindPhoneNumber">{{phoneNumber}}</text>
+          <text style="margin-left:10rpx" bindtap="bindPhoneNumber">拨打电话</text>
         </view>
         <viex>
       </view>
-
-      <!-- yh -->
-      <view class="flex-item-v item yh item" style="background-color:#031432;">
+    </view>
+    <!-- yh -->
+    <!-- <view class="flex-item-v item yh item" style="background-color:#031432;">
         <view class="toptitle">
           <view class="lefttitle">
             <view class="haodianlog">
@@ -65,28 +65,53 @@
             </view>
           </view>
         </view>
-      </view>
-      <!-- hot -->
-      <view class="flex-item-v_hot item" style="">
-        <view class="hottitle"> <text>优惠券区域</text></view>
-        <view class="hotcontant common">
-          <scroll-view class="scroll-view" scroll-x>
-            <view class="scroll-view-wrap" scroll-x="true" bindscroll="scroll" style="width: 100%" scroll-left="{{0}}">
-              <view class="hotimg hotitem scroll-view-item-h " tt:for="{{hotimg}}" tt:for-index="idx"
-                tt:for-item="itemName">
-                <image class="imageitem" mode="widthFix" src="{{itemName.hoturl}}" width="500rpx" height="500rpx" />
-                <view class="hottitle"> <text>{{itemName.hottitle}}</text></view>
-                <view class="hotmoney" style="color:red"> <text>{{itemName.hotmoney}}</text></view>
+      </view> -->
+    <!-- hot -->
+    <view class="page-section">
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(0, 0, 0, .3)"
+        indicator-active-color="rgba(0, 0, 0, 1)" current="{{0}}" current-item-id="" previous-margin="" next-margin=""
+        display-multiple-items="{{1}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}"
+        vertical="{{vertical}}" duration="{{duration}}" bindanimationfinish="animationFinish"
+        bindtransition="transition">
+        <block tt:for="{{background}}">
+          <swiper-item>
+            <view class="swiper-item">
+              <image style="" class="" mode="widthFix" src="{{item}}" />
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="flex-item-v_hot item" style="">
+      <view class="hottitle"> <text>优惠券区域</text></view>
+      <view class="hotcontant common">
+        <scroll-view class="scroll-view" scroll-x>
+          <view class="scroll-view-wrap" scroll-x="true" bindscroll="scroll" style="width: 100%" scroll-left="{{0}}">
+            <view class="hotimg hotitem scroll-view-item-h " tt:for="{{hotimg}}" tt:for-index="idx"
+              tt:for-item="itemName">
+              <!-- <view class="quan">
+                  优惠券
+                </view> -->
+              <image class="imagelog topleft" style="margin-left:0px;margin-right:15px;" mode="aspectFit"
+                src="{{logurl}}" />
+              <view class="quan-desc">
+                <view class="hottitle">{{itemName.title}}</view>
+                <view class="hotmoney" style="color:#666666">{{itemName.create_time}}</view>
+              </view>
+              <view class="quan-btn" data-id="{{itemName.id}}" data-article_id="{{itemName.article_id}}"
+                bindtap="bindSee">
+                领取
               </view>
             </view>
-          </scroll-view>
-        </view>
+          </view>
+        </scroll-view>
       </view>
     </view>
 
+
     <!-- hotgl -->
-    <view class="flex-item-v_hot item" style="">
-      <view class="hottitle"> <text>好店推荐.活动预约</text></view>
+    <!-- <view class="flex-item-v_hot item" style="">
+      <view class="hottitle"> <text>热门攻略</text></view>
       <view class="hotcontant common">
         <view class="hotimg ">
           <image class="imageitem" mode="aspectFit" src="{{url}}" />
@@ -94,24 +119,24 @@
           <view class="hotgldate date"> <text>{{hotgldate}}</text></view>
         </view>
       </view>
-    </view>
+    </view> -->
     <!-- jqgl -->
     <view class="flex-item-v_hot item" style="">
-      <view class="hottitle"> <text>抖音门店推怎么玩</text></view>
+      <view class="hottitle"> <text>景区攻略</text></view>
       <view class="hotcontant jqglhotimg common">
         <view class="qglhotimg " tt:for="{{jqgllist}}" tt:for-index="idx" tt:for-item="itemName" width="400rpx"
-          height="400rpx">
-          <image class="imageitem " mode="aspectFit" src="{{itemName.hoturl}}" style="height:280rpx;" />
+          height="400rpx" data-id="{{itemName.id}}" bindtap="onJqglClick">
+          <image class="imageitem " mode="aspectFill" src="{{itemName.cover_img}}" />
           <view class="jqgltitle">
-            <text>{{itemName.jqgltitle}}</text>
+            <text>{{itemName.title}}</text>
           </view>
-          <view class="jqgldate date"> <text>{{itemName.jqgldate}}</text></view>
-          <view class="jqglmoney" style="color:#E1485D"> <text>{{itemName.jqglmoney}}</text></view>
+          <view class="jqgldate date"> <text>{{itemName.create_time}}</text></view>
+          <view class="jqglmoney" style="color:#E1485D"> <text>{{itemName.price}}元</text></view>
         </view>
       </view>
     </view>
     <!-- ph -->
-    <view class="flex-item-v_hot item" style="">
+    <!-- <view class="flex-item-v_hot item" style="">
       <view class="hottitle"> <text>拍抖音.看排行</text></view>
       <view class="hotcontant jqglhotimg common">
         <view class="qglhotimg " tt:for="{{jqgllist}}" tt:for-index="idx" tt:for-item="itemName" width="400rpx"
@@ -124,7 +149,7 @@
           <view class="jqglmoney" style="color:#E1485D"> <text>{{itemName.jqglmoney}}</text></view>
         </view>
       </view>
-    </view>
+    </view> -->
     <!-- <view class="toptitles">
       <view bindtop="tapName"><text>顾客视频</text></view>
       <view bindtop="tapName"><text>顾客排行榜</text></view>
@@ -151,8 +176,8 @@
       </view>
     </view> -->
   </view>
-  <view class="paishe" bindtap="bindPaishe">
+  <!-- <view class="paishe" bindtap="bindPaishe">
     <image mode="aspectFit" src="indeximg/paishe.png" />
-  </view>
+  </view> -->
 </view>
 <!-- </template> -->

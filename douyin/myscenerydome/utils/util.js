@@ -1,34 +1,6 @@
 import { userLogin } from './api'
-function checkSession() {
-    return new Promise((resolve, reject) => {
-        tt.checkSession({
-            success: () => {
-                resolve(true);
-            },
-            fail: () => {
-                reject(false);
-            }
-        })
-    });
-}
 
-function login() {
-    return new Promise((resolve, reject) => {
-        tt.login({
-            success: (res) => {
-                if (res.code) {
-                    //登录远程服务器
-                    resolve(res);
-                } else {
-                    reject(res);
-                }
-            },
-            fail: (err) => {
-                reject(err);
-            }
-        });
-    });
-}
+
 
 function getUserInfo() {
     return new Promise((resolve, reject) => {
@@ -48,55 +20,52 @@ function getUserInfo() {
 function loginByTT() {
     return new Promise((resolve, reject) => {
         // 先获取用户信息权限
-        return tt.authorize({
-            scope: "scope.userInfo",
-            success: () => {
-                //检查是否已经存在code
-
-                tt.checkSession({
-                    success: (res) => {
-                        debugger
-                        tt.getUserInfo({
-                            withCredentials: true,
-                            success: (res) => {
-                                resolve(res)
-                            },
-                            fail(res) {
-                                reject(res);
-                            },
-                        });
-                    },
-                    fail: (res) => {
-                        console.log(`session 已过期，需要重新登录`);
-                        tt.login({
-                            success: (loginRes) => {
-                                tt.getUserInfo({
-                                    withCredentials: true,
-                                    success(infoRes) {
-                                        const { code } = loginRes;
-                                        userLogin({ code }).then((userInfo) => {
-                                            resolve({ loginRes, infoRes, userInfo })
+        const userInfo = tt.getStorageSync("userInfo");
+        if (userInfo) {
+            return new Promise(() => {
+                resolve({ loginRes: userInfo });
+            })
+        } else {
+            return tt.login({
+                success: (loginRes) => {
+                    tt.authorize({
+                        scope: "scope.userInfo",
+                        success: () => {
+                            tt.getUserInfo({
+                                withCredentials: true,
+                                success(infoRes) {
+                                    const { code } = loginRes;
+                                    const { userInfo } = infoRes;
+                                    tt.setStorageSync('userInfo', userInfo);
+                                    tt.setStorageSync('token', "a774b65442bb11ceffd3b8cc3858fd19");
+                                    resolve({ loginRes: userInfo })
+                                    return;
+                                    userLogin({ code }).then((userInfo) => {
+                                        // tt.setStorageSync('userInfo', ajaxData.data.employeeVo);
+                                        // tt.setStorageSync('token', ajaxData.data['ERP-WX-TOKEN']);
+                                        resolve({ loginRes, infoRes, userInfo })
+                                    }).catch((data) => {
+                                        tt.showToast({
+                                            title: data.message || '服务君繁忙~',
+                                            icon: 'fail',
                                         })
-                                    },
-                                    fail(res) {
-                                        console.log(`getUserInfo 调用失败`);
-                                        reject(res);
-                                    },
-                                });
-                            },
-                            fail: (err) => {
-                                reject(res);
-                                console.log("登录失败", err);
-                            },
-                        });
-                    },
-                });
-            },
-            fail: (res) => {
-                console.log(res)
-                reject(res);
-            }
-        });
+                                    })
+                                },
+                                fail(res) {
+                                    console.log(`getUserInfo 调用失败`);
+                                    reject(res);
+                                },
+                            });
+                        },
+                    });
+                },
+                fail: (res) => {
+                    console.log(res)
+                    reject(res);
+                },
+            });
+        }
+
     });
 }
 
@@ -144,9 +113,23 @@ function getFlatternDistance(lat1, lng1, lat2, lng2) {
     var aaa = d * (1 + fl * (h1 * sf * (1 - sg) - h2 * (1 - sf) * sg));
     return Math.round(aaa / 1000);
 }
+const dataListPage = [
+
+];
+for (let i = 0; i < 20; i++) {
+    dataListPage.push({
+
+        "id": i,
+        "title": "优选店铺0000" + (i + 1),
+        "price": 2000 + i,
+        "cover_img": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1141259048,554497535&fm=26&gp=0.jpg"
+
+    })
+}
 
 module.exports = {
     loginByTT,
     getUserInfo,
-    getFlatternDistance
+    getFlatternDistance,
+    dataListPage,
 }

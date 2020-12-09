@@ -1,0 +1,19 @@
+<view class="wrap">
+
+    <view class="detail-box">
+        <image class="imagelog " mode="aspectFit" src="/pages/index/indeximg/logo.jpg" />
+        <view class="item">50元兑换券</view>
+        <view class="item">店铺名称：好店拍拍</view>
+        <view class="item">店铺名称：山东烟台黄务卧龙中路</view>
+        <view class="item">到期时间：2020-12-06 14:44:16</view>
+        <view tt:if="{{info.status==1}}">
+            <view class="btn" bindtap="bindHexiao">点击核销</view>
+        </view>
+        <view class="item" tt:elif="{{info.status==2}}">
+            状态：已核销
+        </view>
+        <view class="item" tt:elif="{{info.status==3}}">
+            状态：已过期
+        </view>
+    </view>
+</view>

@@ -1,5 +1,6 @@
-const app = getApp();
+
 import util from '../../utils/util.js'
+
 Page({
   data: {
     loginState: 0,
@@ -8,6 +9,7 @@ Page({
   },
   onLoad: function (options) {
     // Do some initialize when page load.
+    this.bindLogin();
   },
   onReady: function () {
     // Do something when page ready.
@@ -45,20 +47,48 @@ Page({
     );
   },
   bindLogin: function () {
-    util.loginByTT().then(({loginRes,infoRes}) => {
-      this.setLogin(infoRes);
+    util.loginByTT().then(({ loginRes }) => {
+      this.setLogin(loginRes);
     })
   },
-  setLogin(res){
-    this.setData(
-      {
-        loginState: 1,
-        userInfo: res.userInfo,
-      },
-      function () {
-        // this is setData callback
-      },
-    );
+  bindShoucang() {
+    util.loginByTT().then(({ loginRes }) => {
+      this.setLogin(loginRes);
+      tt.navigateTo({
+        url: `/pages/shoucang/shoucang`,
+        success(res) {
+          console.log(res);
+        },
+        fail(res) {
+          console.log("navigateTo调用失败");
+        },
+      });
+    })
+  },
+  bindTicketpkg() {
+    util.loginByTT().then(({ loginRes }) => {
+      this.setLogin(loginRes);
+      tt.navigateTo({
+        url: `/pages/ticketpkg/ticketpkg`,
+        success(res) {
+          console.log(res);
+        },
+        fail(res) {
+          console.log("navigateTo调用失败");
+        },
+      });
+    })
+  },
+  setLogin(res) {
+    if (res) {
+      this.setData(
+        {
+          loginState: 1,
+          userInfo: res,
+        }
+      );
+    }
+
   },
   customData: {
     foo: "bar",

@@ -1,0 +1,31 @@
+<!-- <template> -->
+<!-- 列表 -->
+<view class="wrap" style="">
+    <view tt:if="{{list.length!=0}}">
+        <view class="litem" tt:for="{{list}}" tt:for-index="idx" tt:for-item="itemName"
+            data-id="{{itemName.article_id}}" bindtap="onItemClick">
+            <view class="imagebox">
+                <image class="img" mode="aspectFill" src="{{itemName.cover_img}}" />
+            </view>
+            <view class="jqgltitle" style="font-size:32rpx">
+                <text>{{itemName.title}}</text>
+            </view>
+            <view class="desc">
+                <view class="desc-item jqglmoney" style="color:#E1485D;font-size:30rpx">
+                    <text>{{itemName.price}}元</text>
+                </view>
+                <view class="desc-item jqgldate date" style="font-size:24rpx">
+                    <text>{{itemName.create_time}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="morecontent">
+            <text>--------{{morecontent}}--------</text>
+        </view>
+    </view>
+    <view class="no-wrap" tt:elif="{{list.length==0 && isEnd}}">
+        <image class="no-img" mode="widthFix" src="icon/no.png" />
+        <view>暂无收藏</view>
+    </view>
+</view>
+<!-- </template> -->

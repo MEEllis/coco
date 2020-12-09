@@ -1,7 +1,0 @@
-.morecontent{
-    width:90%;
-     margin:0rpx auto;
-     color:#BFC0C4;
-     /* border:2rpx solid red; */
-     text-align:center
-}

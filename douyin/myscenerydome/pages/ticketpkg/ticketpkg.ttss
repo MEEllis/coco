@@ -1,0 +1,107 @@
+.ticket-title{
+    display: flex;
+    align-items: center;
+    padding: 30rpx;
+}
+.ticket-title .count{
+    font-size: 28rpx;
+    flex: 1;
+    color: #666666;
+    text-align: right;
+}
+.ticket-title .desc{
+    font-size: 36rpx;
+    flex: 1;
+}
+
+.ticket-wrap{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    padding: 20rpx 80rpx;
+}
+
+.ticket-wrap .ticket-item{
+    padding-bottom: 8rpx;
+    font-size: 32rpx;
+    color: #666666;
+    position: relative;
+}
+
+.ticket-wrap .ticket-item.active::before{
+    position: absolute;
+    content: " ";
+    bottom: -6rpx;
+    left: 8%;
+    width: 84%;
+    height: 4rpx;
+    z-index: 10;
+    background-color:#F4355C; 
+}
+
+.ticket-content-title{
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx;
+}
+
+.ticket-content-title .imagelog{
+    max-width: 60rpx;
+    max-height: 60rpx;
+    margin-right: 8rpx;
+}
+.ticket-content-title .title-item{
+    flex: 1;
+    font-size: 32rpx;
+}
+
+.ticket-content-title .btn{
+   width: 120rpx;
+   height: 50rpx;
+   line-height: 50rpx;
+    color: #ffffff;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 30rpx;
+   border: none;
+   background: #F4355C; 
+}
+
+.ticket-content-box{
+    display: flex;
+    padding: 0rpx 30rpx 20rpx 90rpx;
+}
+.ticket-content-box .quan{
+    background: #F4355C; 
+    color: #ffffff;
+    font-size: 40rpx;
+    width: 130rpx;
+    height: 130rpx;
+    line-height: 130rpx;
+    border-radius: 10rpx;
+    margin-right: 30rpx;
+}
+.ticket-content-box .quan-desc{
+    flex: 1;
+    font-size: 32rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ticket-content-box .quan-desc .address{
+    color: #666666;
+    font-size: 24rpx;
+}
+.ticket-content-box .quan-desc .time{
+    color: #666666;
+    font-size: 24rpx;
+}
+
+.morecontent{
+    width:90%;
+     margin:0rpx auto;
+     color:#BFC0C4;
+     font-size: 24rpx;
+     /* border:2rpx solid red; */
+     text-align:center
+}
