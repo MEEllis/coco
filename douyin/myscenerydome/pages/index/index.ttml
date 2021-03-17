@@ -6,7 +6,7 @@
     <view class="flex-item-v coupon item" style="background:url(indeximg/topbg.jpg);color:black">
       <image class="imagelog topleft" mode="aspectFit" src="{{logurl}}" />
       <view class="flex-wrapper toprigth " style="flex-direction:column;">
-        <view class="flex-item-top" style="background-color: #FFFFFF;color:black; font-weight:bold;text-align:left;">
+        <view class="flex-item-top" style="background-color: #FFFFFF;color:black; font-weight:bold;text-align:left;font-size: 36rpx;">
           优点推--景区攻律</view>
         <view class="top-btn">
           <view class="time itembtn">

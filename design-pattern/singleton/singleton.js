@@ -1,11 +1,10 @@
-//在JavaScript里，实现单例的方式有很多种，其中最简单的一个方式是使用对象字面量的方法，其字面量里可以包含大量的属性和方法：
-var mySingleton = {
-    property1: "something",
-    property2: "something else",
-    method1: function () {
-        console.log('hello world');
-    }
-};
+
+
+
+
+
+
+
 
 //如果以后要扩展该对象，你可以添加自己的私有成员和方法，然后使用闭包在其内部封装这些变量和函数声明。只暴露你想暴露的public成员和方法，样例代码如下：
 var mySingleton = function () {

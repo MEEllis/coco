@@ -27,23 +27,24 @@ function loginByTT() {
             })
         } else {
             return tt.login({
-                success: (loginRes) => {
+                success: (codeRes) => {
                     tt.authorize({
                         scope: "scope.userInfo",
                         success: () => {
                             tt.getUserInfo({
                                 withCredentials: true,
                                 success(infoRes) {
-                                    const { code } = loginRes;
+                                    const { code } = codeRes;
                                     const { userInfo } = infoRes;
-                                    tt.setStorageSync('userInfo', userInfo);
-                                    tt.setStorageSync('token', "a774b65442bb11ceffd3b8cc3858fd19");
-                                    resolve({ loginRes: userInfo })
-                                    return;
-                                    userLogin({ code }).then((userInfo) => {
-                                        // tt.setStorageSync('userInfo', ajaxData.data.employeeVo);
-                                        // tt.setStorageSync('token', ajaxData.data['ERP-WX-TOKEN']);
-                                        resolve({ loginRes, infoRes, userInfo })
+                                    // tt.setStorageSync('userInfo', userInfo);
+                                    // tt.setStorageSync('token', "cd0c8d0d71f07071ea60b598b0080132");
+                                    // resolve({ loginRes: userInfo })
+                                    // return;
+                                    userLogin({ 'code': code }).then((dataRes) => {
+                                        debugger
+                                        tt.setStorageSync('userInfo', userInfo);
+                                        tt.setStorageSync('token', dataRes.data.token);
+                                        resolve({ loginRes: userInfo })
                                     }).catch((data) => {
                                         tt.showToast({
                                             title: data.message || '服务君繁忙~',
